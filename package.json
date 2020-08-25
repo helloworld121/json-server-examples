@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/helloworld121/webpack-typscript-template#readme",
   "devDependencies": {
+    "faker": "^5.0.0",
     "json-server": "^0.16.1",
     "source-map-loader": "^1.0.2",
     "ts-loader": "^8.0.2",
