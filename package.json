@@ -11,6 +11,9 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build.all": "npm run build.prod && npm run build.esnext",
     "test": "echo \"Error: no test specified\" && exit 1",
+
+    "faker.generate": "node ./faker-generate/generate-data.js > ./faker-generate/data.json",
+
     "js.simple": "json-server json-server-simple/database.json",
     "js.module": "node json-server-module/server.js"
   },
