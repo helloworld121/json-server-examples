@@ -2,7 +2,11 @@
 // json-server uses express and it can be customized using any other express middlewares
 // https://github.com/typicode/json-server#module
 
-// server.js
+// for more information see
+// https://github.com/typicode/json-server/blob/master/src/cli/run.js
+// https://github.com/typicode/json-server/blob/master/src/server/defaults.js
+
+const config = require("./json-server.json");
 const jsonServer = require('json-server')
 const server = jsonServer.create()
 
@@ -16,6 +20,7 @@ const router = jsonServer.router(path.join(__dirname, '../json-server-simple/dat
 // Set default middlewares (logger, static, cors and no-cache)
 // See https://github.com/typicode/json-server#api
 const middlewares = jsonServer.defaults({
+    logger: true,
     // Display json-server's built in homepage when json-server starts.
     static: "node_modules/json-server/public",
 });
@@ -37,9 +42,22 @@ server.use((req, res, next) => {
     next()
 })
 
-// Use default router
+
+// https://github.com/typicode/json-server#rewriter-example
+// Add this before server.use(router)
+/*
+server.use(jsonServer.rewriter({
+    '/api/*': '/$1',
+    '/blog/:resource/:id/show': '/:resource/:id'
+}))
+ */
+
+// set routes
 server.use(router)
-server.listen(3000, () => {
-    console.log('JSON Server is running')
+
+// start server
+const port = config.port;
+server.listen(port, () => {
+    console.log('JSON Server is running');
 })
 
