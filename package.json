@@ -12,7 +12,8 @@
     "build.all": "npm run build.prod && npm run build.esnext",
     "test": "echo \"Error: no test specified\" && exit 1",
 
-    "mock.start": "json-server json-server/database.json"
+    "js.simple": "json-server json-server-simple/database.json",
+    "js.module": "node json-server-module/server.js"
   },
   "repository": {
     "type": "git",
