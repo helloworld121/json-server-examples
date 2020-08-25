@@ -6,6 +6,7 @@
 // https://github.com/typicode/json-server/blob/master/src/cli/run.js
 // https://github.com/typicode/json-server/blob/master/src/server/defaults.js
 
+
 const config = require("./json-server.json");
 const jsonServer = require('json-server')
 const server = jsonServer.create()
@@ -15,6 +16,13 @@ const server = jsonServer.create()
 // If you run the above code from another directory, it’s better to use an absolute path:
 const path = require('path')
 const router = jsonServer.router(path.join(__dirname, '../json-server-simple/database.json'))
+
+// multple route-files
+// if there are multiple database files => for example to put each type into an own file you can to the following
+// https://github.com/typicode/json-server/issues/367
+// a more generic approach
+// https://billyyyyy3320.com/en/2019/07/21/create-json-server-with-multiple-files/
+
 
 
 // Set default middlewares (logger, static, cors and no-cache)
