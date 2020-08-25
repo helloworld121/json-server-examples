@@ -18,6 +18,7 @@ const router = jsonServer.router(path.join(__dirname, '../json-server-simple/dat
 
 
 // Set default middlewares (logger, static, cors and no-cache)
+// middleware must be before router
 // See https://github.com/typicode/json-server#api
 const middlewares = jsonServer.defaults({
     logger: true,
@@ -34,6 +35,16 @@ server.get('/echo', (req, res) => {
 // To handle POST, PUT and PATCH you need to use a body-parser
 // You can use the one used by JSON Server
 server.use(jsonServer.bodyParser)
+
+// make json-server delay all responses
+/*
+server.use(function(req, res, next){
+    setTimeout(next, 10000);
+});
+*/
+
+// example to add createAt
+/*
 server.use((req, res, next) => {
     if (req.method === 'POST') {
         req.body.createdAt = Date.now()
@@ -41,6 +52,7 @@ server.use((req, res, next) => {
     // Continue to JSON Server router
     next()
 })
+*/
 
 
 // https://github.com/typicode/json-server#rewriter-example
@@ -52,12 +64,12 @@ server.use(jsonServer.rewriter({
 }))
  */
 
-// set routes
+// set routes => order is important, midlleware must be bevore router => therefore we add this at the end
 server.use(router)
 
 // start server
 const port = config.port;
 server.listen(port, () => {
-    console.log('JSON Server is running');
+    console.log(`JSON Server is running on ${port}`);
 })
 

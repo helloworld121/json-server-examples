@@ -11,7 +11,6 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build.all": "npm run build.prod && npm run build.esnext",
     "test": "echo \"Error: no test specified\" && exit 1",
-
     "js.simple": "json-server json-server-simple/database.json",
     "js.module": "node json-server-module/server.js"
   },
