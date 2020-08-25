@@ -1,7 +1,7 @@
 {
-  "name": "webpack-typscript-template",
+  "name": "json-server-examples",
   "version": "0.0.1",
-  "description": "template project including webpack and typescript",
+  "description": "examples on how to use and configure json-server",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --port 9000 --inline --progress --profile --colors --watch --content-base src/ --mode development",
@@ -9,9 +9,10 @@
     "build.prod": "webpack --config webpack.config.js -p",
     "build.esnext": "npm run build:types && npm run build:js",
     "build:types": "tsc --emitDeclarationOnly",
-    "//": "(// => build:js)babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
     "build.all": "npm run build.prod && npm run build.esnext",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+
+    "mock.start": "json-server json-server/database.json"
   },
   "repository": {
     "type": "git",

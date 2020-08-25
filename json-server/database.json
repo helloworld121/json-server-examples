@@ -1,0 +1,14 @@
+{
+  "books": [
+    {"author":  "Phillip P. Peterson", "name": "Paradox: Am Abgrund der Ewigkeit"},
+    {"author":  "Phillip P. Peterson", "name": "Paradox 2: Jenseits der Ewigkeit"},
+    {"author":  "Phillip P. Peterson", "name": "Paradox 3: Ewigkeit"},
+    {"author":  "Phillip P. Peterson", "name": "Transport"},
+    {"author":  "Phillip P. Peterson", "name": "Transport 2: Todesflut"},
+    {"author":  "Phillip P. Peterson", "name": "Transport 3: Todeszone"},
+    {"author":  "Robert A. Heinlein", "name": "Starship Troopers"},
+    {"author":  "Jamie Sawyer", "name": "Die Lazarus-Legion"},
+    {"author":  "Jamie Sawyer", "name": "Die Lazarus-Mission"},
+    {"author":  "Jamie Sawyer", "name": "Das Lazarus-Spiel"}
+  ]
+}
