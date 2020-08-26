@@ -11,9 +11,7 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build.all": "npm run build.prod && npm run build.esnext",
     "test": "echo \"Error: no test specified\" && exit 1",
-
     "faker.generate": "node ./faker-generate/generate-data.js > ./faker-generate/data.json",
-
     "js.simple": "json-server json-server-simple/database.json",
     "js.module": "node json-server-module/server.js"
   },
@@ -32,6 +30,7 @@
   },
   "homepage": "https://github.com/helloworld121/webpack-typscript-template#readme",
   "devDependencies": {
+    "@types/faker": "^4.1.12",
     "faker": "^5.0.0",
     "json-server": "^0.16.1",
     "source-map-loader": "^1.0.2",
