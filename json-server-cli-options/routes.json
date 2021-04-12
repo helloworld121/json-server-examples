@@ -1,0 +1,6 @@
+{
+  "//": "https://github.com/typicode/json-server#https",
+  "/:resource/:id/show": "/:resource/:id",
+  "/posts/:category": "/posts?category=:category",
+  "/employees\\?id=:id": "/employees/:id"
+}

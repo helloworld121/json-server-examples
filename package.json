@@ -13,7 +13,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "faker.generate": "node ./faker-generate/generate-data.js > ./faker-generate/data.json",
     "js.simple": "json-server json-server-simple/database.json",
-    "js.module": "node json-server-module/server.js"
+    "js.module": "node json-server-module/server.js",
+    "js.cli-options": "json-server ./json-server-cli-options/generate-data.js --routes ./json-server-cli-options/routes.json --middlewares ./json-server-cli-options/middlewares-header.js"
   },
   "repository": {
     "type": "git",
